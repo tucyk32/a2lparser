@@ -191,7 +191,7 @@ class A2LLex:
             + LexerKeywords.keywords_enum
             + LexerKeywords.keywords_datatypes
         )
-        + r")\b"
+        + r")\b(?![\.\w-])"
     )
     def t_KEYWORD_TYPE(self, t):
         """
