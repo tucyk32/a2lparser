@@ -19,7 +19,9 @@
 #######################################################################################
 
 
-class ParsingException(Exception):
-    """
-    Exception thrown when encountering a fatal error during parsing.
-    """
+# Import fixtures to make them available across all tests.
+# These imports are not used directly in this file but are necessary
+# for pytest to recognize and use these fixtures.
+from .fixture_utils import create_file  # noqa: F401, pylint: disable=unused-import
+from .fixture_utils import compare_files  # noqa: F401, pylint: disable=unused-import
+from .fixture_utils import check_files_exist  # noqa: F401, pylint: disable=unused-import
